@@ -1,4 +1,5 @@
 services:
+
   db:
     image: postgres:17
     environment:
@@ -15,6 +16,8 @@ services:
       timeout: 5s
       retries: 5
 
+
+gst
   api:
     build:
       context: ./api
@@ -40,5 +43,21 @@ services:
       "
     env_file:
       - .env
+
+  frontend:
+    build:
+      context: ./ui
+      args:
+        NODE_ENV: development  # or production
+    environment:
+      - NODE_ENV=development  # passed into container
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui:/app
+      - /app/node_modules
+    env_file:
+      - .env
+
 volumes:
   postgres-data:
