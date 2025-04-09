@@ -1,0 +1,5 @@
+summary: Root
+description: Redirects to API Documentation
+responses:
+  302: 
+    description: Redirects to API Documentation
