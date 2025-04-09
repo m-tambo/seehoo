@@ -1,6 +1,10 @@
+# API
+
 venv
 .env
 __pycache__
 .DS_Store
+
+# UI
 
 /node_modules
