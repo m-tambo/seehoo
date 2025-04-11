@@ -1,20 +1,14 @@
-import { PropsWithChildren, StrictMode } from 'react'
+import { Outlet } from 'react-router';
 
 import Header from 'components/Header';
 
-function App() {
+const App = () => (
+  <body>
+    <Header />
+    <main>
+      <Outlet />
+    </main>
+  </body>
+)
 
-  const DevWrapper: React.FC<PropsWithChildren> = ({ children }) => (
-    process.env.NODE_ENV === 'development' ? <StrictMode>{children}</StrictMode> : <>{children}</>
-  )
-
-  return (
-    <DevWrapper>
-      <div className="App">
-        <Header />
-      </div>
-    </DevWrapper>
-  );
-}
-
-export default App;
+export default App
