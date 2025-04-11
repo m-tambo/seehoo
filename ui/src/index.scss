@@ -1,0 +1,22 @@
+@import './variables.scss';
+
+* {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  // font-weight: <weight>;
+  // font-style: normal;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: $cta-1-color;
+  font-family: "Chango", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+body {
+  color: $font-color;
+  margin: 0;
+  background-color: $background-color;
+}

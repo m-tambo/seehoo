@@ -1,0 +1,13 @@
+header, nav {
+    display: flex;
+}
+
+header { 
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 4px 8px;
+}
+
+nav {
+    padding-bottom: 4px;
+}
