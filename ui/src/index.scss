@@ -20,3 +20,12 @@ body {
   margin: 0;
   background-color: $background-color;
 }
+
+i {
+  font-family: "Material Icons";
+  font-style: normal;
+}
+
+main {
+  padding: 8px $body-vertical-padding;
+}
