@@ -1,0 +1,52 @@
+@import 'variables.scss';
+
+$logo-color: $cta-1-color;
+
+.Logo {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: $logo-color;
+    font-family: "Chango", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 0;
+
+    .eye {
+        position: absolute;
+        background-color: white;
+        width: 8px;
+        height: 8px;
+        border-radius: 100%;
+        z-index: 1;
+    }
+
+    .cover {
+        position: absolute;
+        background-color: $logo-color;
+        width: 5px;
+        height: 10px;
+        z-index: 1;
+    }
+    
+    .c0, .e0 {
+        height: 5px;
+        left: 21%;
+        top: 45%;
+    }
+    .c1, .e1 {
+        height: 5px;
+        left: 37%;
+        top: 45%;
+    }
+    
+    .c2, .e2 {
+        left: 72%;
+        top: 45%;
+    }
+
+    .c3, .e3 {
+        left: 90%;
+        top: 45%;
+    }
+}
