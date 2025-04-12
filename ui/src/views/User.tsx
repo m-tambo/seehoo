@@ -6,6 +6,6 @@ const U = () => (
   </div>
 )
 
-const User = <Route path="/user" element={<u />} />
+const User = <Route path="/user" element={<U />} />
 
 export default User
