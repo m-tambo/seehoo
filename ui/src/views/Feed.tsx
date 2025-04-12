@@ -2,7 +2,7 @@ import { Route } from "react-router"
 
 const F = () => (
   <div>
-    hello feed
+    hello feed    
   </div>
 )
 
