@@ -2,7 +2,7 @@ import { Route } from "react-router"
 
 const C = () => (
   <div>
-    hello feed
+    hello calendar
   </div>
 )
 
