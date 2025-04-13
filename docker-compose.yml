@@ -15,7 +15,12 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-
+  ollama:
+    image: ollama/ollama
+    ports: 
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
   api:
     build:
       context: ./api
@@ -24,6 +29,8 @@ services:
     depends_on:
       db:
         condition: service_healthy  # Wait for the db service to be healthy
+      ollama:
+        condition: service_started
     environment:
       FLASK_APP: ${FLASK_APP}
       FLASK_DEBUG: ${FLASK_DEBUG}
@@ -33,7 +40,7 @@ services:
       PG_DB: ${PG_DB}
       PG_PORT: ${PG_PORT}
     volumes:
-      - .:/app
+      - ./api:/api
     command: >
       sh -c "
       flask db upgrade &&
@@ -59,3 +66,4 @@ services:
 
 volumes:
   postgres-data:
+  ollama_data:

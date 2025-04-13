@@ -35,3 +35,5 @@ SWAGGER = {
 }
 
 SWAGGER_URL = environ.get('SWAGGER_URL')
+OLLAMA_HOST=environ.get("OLLAMA_HOST", "ollama")
+OLLAMA_URL=f"http://{OLLAMA_HOST}:11434/api/generate"

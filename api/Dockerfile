@@ -1,10 +1,11 @@
 FROM python:3.9-slim
 WORKDIR /api
-COPY requirements.txt .
 # SETUP CHROME FOR SELENIUM
-RUN apt-get update && apt-get install -y chromium
+RUN apt-get update && apt-get install -y chromium chromium-driver
 # INSTALL FLASK DEPENDENCIES
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . /api
 
 # RUN FLASK

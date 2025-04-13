@@ -9,8 +9,12 @@ from bs4 import BeautifulSoup
 class Crawler:
     @classmethod
     def driver(cls): 
-        service = ChromeService()
-        return webdriver.Chrome(service=service)
+        service = ChromeService(executable_path='/usr/bin/chromedriver')
+        options = webdriver.ChromeOptions()
+        options.add_argument("--headless")  # Run in headless mode
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        return webdriver.Chrome(service=service, options=options)
 
     @classmethod
     def get(cls, url, wait=10): 
