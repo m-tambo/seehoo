@@ -1,10 +1,13 @@
-# Getting Started with Create React App
+# Seehoo UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Technology
+React, React Router, Typescript, Scss, Docker
 
+### Local Development
+#### Environment
+Setup a `.env` file in the parent directory. A template is provided.
+#### Adding Dependencies
+Dependencies are handled from within the container. (See overall readme for instructions on spinning up the entire app suite).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- exec into the container: `docker exec -it seehoo-frontend-1 sh`
+- use yarn: `yarn add <package>`

@@ -1,0 +1,79 @@
+@import './variables.scss';
+
+$footer-height: 58px;
+
+* {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  color: $cta-1-color;
+  font-family: "Chango", sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow: scroll;
+  margin: 0;
+  color: $font-color;
+  background-color: $background-color;
+}
+
+main {
+  height: calc(100vh - $footer-height);
+  overflow-y: auto;
+  margin-bottom: calc($footer-height + 16px);
+  header {
+    background: linear-gradient(to top, transparent, $error-color);
+    display: flex;
+    height: 74px;
+    padding-top: 4px;
+    // align-items: center;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+  
+  footer {
+    height: $footer-height;
+    position: absolute;
+    // background-color: $black;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 $body-horizontal-padding;
+    background: linear-gradient(to top, $black, transparent);
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      a {
+          text-decoration: none;
+          font-size: 24px;
+          color: $font-color;
+      }
+      
+      a.active {
+          color: $white;
+          border-color: $white;
+      }
+    }
+  }
+}
+
+i {
+  font-family: "Material Icons";
+  font-style: normal;
+}
